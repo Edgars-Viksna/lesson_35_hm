@@ -43,8 +43,14 @@ public class Main_Task2 {
 
     public static Set<Person> findDuplicates(List<Person> list) {
         Set<Person> result = new HashSet<>();
-
-
+        List<Person> temp = new ArrayList<>();
+        for (Person person : list) {
+            if (temp.contains(person)) {
+                result.add(person);
+            } else {
+                temp.add(person);
+            }
+        }
         return result;
     }
 

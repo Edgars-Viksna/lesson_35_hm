@@ -11,7 +11,7 @@ public class Main_Task2 {
         personList1.add(new Person("Alanos", "Bergos"));
         personList1.add(new Person("Alanos", "Bergos"));
         personList1.add(new Person("Barbyy", "Cimmer"));
-        personList1.add(new Person("Celine", "Dionis"));
+        personList1.add(new Person("Barbyy", "Cimmer"));
         personList1.add(new Person("Dirkos", "Einzel"));
         personList1.forEach(System.out::println);
 
@@ -28,8 +28,7 @@ public class Main_Task2 {
         filter(personList1, personList2).forEach(System.out::println);
 
         System.out.println("-------- Filtered List with duplicates  -----------");
-        Set<Person> result = new HashSet<>(findDuplicates(personList1));
-        System.out.println(result);
+        findDuplicates(personList1).forEach(person -> System.out.println("duplicated person is: " + person));
 
 
     }
